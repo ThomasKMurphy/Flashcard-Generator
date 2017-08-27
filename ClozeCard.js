@@ -17,8 +17,9 @@ var BasicCard = require("./BasicCard.js");
 
 var ClozeCard = function(text, cloze) {
   this.fullText = text;
-  this.partial = partial
   this.cloze = cloze;
+  this.partial = function () {
+  }
 };
 
 module.exports = ClozeCard;

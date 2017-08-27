@@ -4,16 +4,16 @@ var fs = require('fs');
 
 var createFlashCard = function() {
   inquirer.prompt({
-      name: "",
-      message: "",
+      name: "complete",
+      message: "Enter complete sentence.",
     }),
     inquirer.prompt({
-      name: "",
-      message: "",
+      name: "response",
+      message: "Enter hidden word.",
     }),
     inquirer.prompt({
-      name: "",
-      message: "",
+      name: "incomplete",
+      message: "Enter incomplete sentence.",
     })
 }
 
