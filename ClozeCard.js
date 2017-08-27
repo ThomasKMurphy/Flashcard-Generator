@@ -19,10 +19,16 @@ var inquirer = require('inquirer');
 var ClozeCard = function(text, cloze) {
   this.fullText = text;
   this.cloze = cloze;
-  this.partial = function () {
+  this.partial = function() {
+    if (this.text.includes(this.cloze)) {
+      return this.fullText.replace(this.cloze, "...");
+    }
+    if (err) {
+      return console.log(err);
+    }
   }
+}
 };
-
 
 var createFlashCard = function() {
   inquirer.prompt({
@@ -38,7 +44,5 @@ var createFlashCard = function() {
       message: "Enter incomplete sentence.",
     })
 }
-
-
 
 module.exports = ClozeCard;
