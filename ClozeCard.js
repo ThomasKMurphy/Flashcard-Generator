@@ -14,6 +14,7 @@
 
 
 var BasicCard = require("./BasicCard.js");
+var inquirer = require('inquirer');
 
 var ClozeCard = function(text, cloze) {
   this.fullText = text;
@@ -21,5 +22,23 @@ var ClozeCard = function(text, cloze) {
   this.partial = function () {
   }
 };
+
+
+var createFlashCard = function() {
+  inquirer.prompt({
+      name: "complete",
+      message: "Enter complete sentence.",
+    }),
+    inquirer.prompt({
+      name: "response",
+      message: "Enter hidden word.",
+    }),
+    inquirer.prompt({
+      name: "incomplete",
+      message: "Enter incomplete sentence.",
+    })
+}
+
+
 
 module.exports = ClozeCard;
