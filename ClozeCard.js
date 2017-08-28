@@ -27,7 +27,6 @@ var ClozeCard = function(text, cloze) {
       return console.log(err);
     }
   }
-}
 };
 
 var createFlashCard = function() {
